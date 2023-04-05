@@ -1,67 +1,81 @@
-// 'use strict'    // mod restrittiva. can applicare a tutto il file o a singole funzioni
+// // 'use strict'    // mod restrittiva. can applicare a tutto il file o a singole funzioni
+// //           ▬▬▬▬▬▬▬▬▬▬▬▬ ParseIntError ▬▬▬▬▬▬▬▬▬▬▬▬ 
+// console.log('▬▬▬▬▬▬▬▬▬▬▬▬ ParseIntError ▬▬▬▬▬▬▬▬▬▬▬▬')
 
-let myName
+// function parseIntWithError(selectedString) {
+//     const result = parseInt(selectedString);
+//     if (isNaN(result)) {
+//         throw new Error('sei un cretino, non hau messo un numero!!!!')
 
-function setName(newName) {
-        
-    myNam = newName
-
-}
-
-setName('Walter') // Error!!!
-console.log('myName:'+ myName)
-console.log('myNam:'+ myNam)
-
-
-//  Annotazioni di tipo
-
-//val: bool
-//bool -> bool  // entra un bool esce un bool
-function invert(val) {
-    return !val
-}
-
-console.log('invert(true):' + invert(true))
-console.log('invert5):' + invert(5))
-
-// (int,int) -> int
-
-function multiply(n1,n2){
-    return n1*n2
-}
-
-// Tipi generici
-
-//Array[T] -> T
-
-// pickFirstElement(array){
-//     return array[0];
+//     } else {
+//         return result
+//     }
 // }
 
-// pickFirstElement(['ciao','mondo']) // -> 'ciao'
-pickFirstElementOfArray([1,2,3])// -> 1
+
+// try {
+//     const numero = parseIntWithError('caffe    ')
+//     console.log(numero)
+// } catch (error) {
+//     console.log(error.message)
+//     console.log('caro utente, forse è colpa mia,ma qualcosa non è andato a buon fine. potresti reinserire il numero? grazie stronzo')
+
+// }
+
+// //           ▬▬▬▬▬▬▬▬▬▬▬▬ IndexOfError ▬▬▬▬▬▬▬▬▬▬▬▬ 
+// console.log('▬▬▬▬▬▬▬▬▬▬▬▬ IndexOfError ▬▬▬▬▬▬▬▬▬▬▬▬')
+// function indexOfWhithError(array, element) {
+//     if (array.length === 0) {
+//         throw new EmptyArrayError('che cazzo combini? mi hai passato un array vuoto!')
+//     } else {
+//         const index = array.indexOf(element);
+//         if (index === -1) {
+//             throw new ElementNotFoundError(' non ho trovato un belin di niente!!')
+//         } else {
+//             return index;
+
+//         }
+//     }
+// }
+
+// try {
+//     const index = indexOfWhithError(['pippo', 'pluto', 'paperino'], pluto)
+//     console.log(index);
+// } catch (error) {
+//     if (error instanceof EmptyArrayError) {
+//         console.log('caro utente esplodi ti prego perche l array è vuoto boia cane')
+//     } else if (error instanceof ElementNotFoundError) {
+//         console.log('ho cercato in lungo e in largo ma piuìdfèoiahfahdhua')
+//     } else {
+//         console.log('qualcosa si è porcnonadnakndokandonkaèodnaodnaodnbapijubfaòiuhfòauhfòahfòkauhfòahfòkhaòfkuhòau')
+//     }
+// }
+
+// function isElementInArray(array,element) {
+//     try {
+//         indexOfWhithError(array,element);
+//         return true
+//     } catch (error) {
+//         if (error instanceof ElementNotFoundError) {
+//             return false;
+//         }else{
+//             throw error
+//         }
+//     }
+// }
+
+// try {
+//     const isInside = isElementInArray(['qui','quo','qua'],'quoi')
+// } catch (error) {
+//     console.log(error.message)
+    
+// }
+
+// class multiplicator
 
 
-function test(testDescription, body) {
-    if (!body()) {
-    console.log(`TEST SUCCEEDED: ${testDescription}`);
-  }else{
-    console.log(`TEST FAILED: ${testDescription}`)
-  }
-  }
 
-
-
-test('Picking first element of array of strings' ,function(){
-return pickFirstElementOfArray(['ciao','mondo']) ==='ciao'})
-
-test('Picking first element of array of integers' ,function(){
-    return pickFirstElementOfArray([1,2,3]) ===1}) 
-
-
-    function repeatStr (n, s) {
- 
-    for (let i = 0; i <= n; i++) {
-        
-    }
-}
+// // ERRORI di tipo generico che passano solo messaggi
+// // console.log(indexOfError(['simone','jing'],'davide'))
+// // console.log(indexOfError(['simone','jing'],'jing'))
+// // console.log(indexOfError([],'davide'))
